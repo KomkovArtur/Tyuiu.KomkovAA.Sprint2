@@ -44,8 +44,20 @@ namespace Tyuiu.KomkovAA.Sprint2.Task6.V10.Lib
                     n--;
                     break;
             }
-            res = ($"{n}.{m}.{g}");
+            if (n >= 10 & m >= 10)
+                res = ($"{n}.{m}.{g}");
+
+            else if (n < 10 & m < 10)
+                res = ($"0{n}.0{m}.{g}");
+
+            else if (n < 10 & m >= 10)
+                res = ($"0{n}.{m}.{g}");
+
+            else
+                res = ($"{n}.0{m}.{g}");
+
             return res;
+
         }
     }
 }
